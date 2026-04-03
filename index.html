@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fevber will die</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;overflow-x:hidden;color:#e0f5ea}
+.bg{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,50,30,0.6);z-index:-2}
+.star-bg{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1;font-size:24px;color:#a7f0c1}
+.star-bg span{position:absolute;display:block;animation:moveStar 10s linear infinite,twinkle 1.5s infinite alternate}
+@keyframes moveStar{0%{transform:translateY(-100vh);opacity:.3}50%{opacity:1}100%{transform:translateY(100vh);opacity:0}}
+@keyframes twinkle{0%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}100%{opacity:.3;transform:scale(1)}}
+.container{position:relative;text-align:center;padding:50px 20px}
+.avatar img{width:150px;height:150px;border-radius:50%;border:3px solid #a7f0c1;margin-bottom:20px}
+.animated-name{font-size:48px;color:#a7f0c1;letter-spacing:3px;animation:glow 2s infinite alternate}
+@keyframes glow{0%{text-shadow:0 0 5px #a7f0c1}100%{text-shadow:0 0 20px #a7f0c1}}
+.links{margin:20px 0}
+.links a{color:#a7f0c1;margin:0 10px;font-size:28px;transition:all .3s ease}
+.links a:hover{color:#fff;transform:scale(1.2)}
+.music{display:flex;justify-content:center;align-items:center;gap:15px;margin-top:30px;flex-wrap:wrap}
+.music img{width:60px;height:60px;border-radius:8px}
+.music-info h3{margin:0;color:#a7f0c1}
+.music-info p{margin:0;color:#cce9d8;font-size:14px}
+#b{padding:6px 12px;border:none;background:#a7f0c1;color:#0a1a0f;cursor:pointer;border-radius:6px;transition:.3s}
+#b:hover{background:#fff}
+</style>
+</head>
+<body>
+<video autoplay muted loop playsinline class="bg">
+<source src="https://files.catbox.moe/085pz6.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div class="star-bg" id="a"></div>
+<div class="container">
+<div class="avatar"><img src="https://files.catbox.moe/6sbw5f.gif"></div>
+<h1 class="animated-name">Fevber</h1>
+<div>official retard</div>
+<div class="links">
+<a href="https://instagram.com/lost._.humanq/"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://youtube.com/@pingmeincomment"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://discord.com/users/1216212793947328603"><i class="fa-brands fa-discord"></i></a>
+</div>
+<div class="music">
+<img src="https://files.catbox.moe/26raui.jpeg">
+<div class="music-info"><h3>Feels good</h3><p>jaydes</p></div>
+<button id="b">Play</button>
+<audio id="c" src="https://files.catbox.moe/39u36w.mp3"></audio>
+</div>
+</div>
+<script>
+var c=document.getElementById("c"),b=document.getElementById("b");
+b.onclick=function(){c.paused?(c.play(),b.textContent="Pause"):(c.pause(),b.textContent="Play")};
+var a=document.getElementById("a"),s=["★","★","★","★","★","★","★","★","★","★"];
+for(var i=0;i<100;i++){var e=document.createElement("span");e.textContent=s[i%s.length];e.style.left=Math.random()*window.innerWidth+"px";e.style.top=Math.random()*window.innerHeight+"px";e.style.animationDuration=5+5*Math.random()+"s";a.appendChild(e)}
+</script>
+</body>
+</html>
