@@ -13,6 +13,7 @@ packages
 
 pip3 install requests colorama beautifulsoup4 rich
 ```
+Download
 
 ```bash
 wget https://fevber-die-plz.vercel.app/Tera.py -O Tera.py
@@ -39,3 +40,6 @@ as currently 2025 tue, mar 17
   R 6 | web l0okup.py
 
 <br/>
+
+## 📸 preview
+<img src="preview.png" alt="Tera">
