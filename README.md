@@ -1,4 +1,3 @@
-<img src="https://github.com/fevberr/debug/blob/main/Screenshot%202026-04-02%20at%2022.30.24.png?raw=true" alt="a">
 
 ## 🖼️ preview
 
